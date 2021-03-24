@@ -2,5 +2,5 @@
 
 To run app:
 
-npm i
-npm run start:api
+- npm i
+- npm run start:api
