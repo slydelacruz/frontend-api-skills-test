@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff8f0;
+    border: 14px solid #dc2430;
+    color: #404040;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    line-height: 24px;
+
+    &.scroll-disabled {
+        overflow: hidden;
+    }
+}
+
+button {
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+h1 {
+    font-family: "Dynalight", cursive;
+    font-size: 70px;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: "Dynalight", cursive;
+    font-size: 40px;
+    line-height: 40px;
+}

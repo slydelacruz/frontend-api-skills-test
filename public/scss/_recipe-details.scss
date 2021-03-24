@@ -1,0 +1,140 @@
+.recipe-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-details {
+    width: 80%;
+    height: 90%;
+    background-color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    padding: 60px;
+    overflow: auto;
+
+    &__header {
+        border-bottom: #dc2430 1px dotted;
+        padding-bottom: 10px;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 4px;
+        padding-left: 4px;
+        text-align: center;
+        line-height: 13px;
+        color: #dc2430;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 3px solid #dc2430;
+    }
+
+    &__sub-title {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 20px;
+        align-items: center;
+        font-size: 14px;
+
+        span {
+            color: #dc2430;
+            font-weight: bold;
+        }
+    }
+
+    h4 {
+        margin: 15px 0 10px;
+        font-size: 18px;
+    }
+
+    .directions {
+        font-size: 14px;
+        border-bottom: #dc2430 1px dotted;
+        padding-bottom: 10px;
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        span {
+            color: #dc2430;
+            font-weight: bold;
+        }
+    }
+
+    .ingredients {
+        display: grid;
+        grid-gap: 10px;
+
+        li {
+            display: grid;
+            grid-template-columns: 20px 1fr;
+            grid-gap: 10px;
+        }
+
+        &__name {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .amount {
+            font-weight: 900;
+            color: #dc2430;
+        }
+
+        .measurement {
+            font-weight: normal;
+            font-style: italic;
+            text-transform: initial;
+        }
+    }
+}
+
+.special-event {
+    display: grid;
+    font-size: 14px;
+    color: #ffa8ae;
+    background: #dc2430;
+    padding: 10px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: flex-start;
+    grid-template-columns: 55px auto;
+    justify-items: center;
+
+    svg {
+        width: 36px;
+    }
+
+    h5 {
+        color: #fff;
+        font-size: 16px;
+
+        span {
+            text-transform: capitalize;
+        }
+    }
+
+    .promo-code {
+        font-weight: 900;
+        font-size: 18px;
+        color: #ffa8ae;
+    }
+}

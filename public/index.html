@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div class="recipe-view">
+
+      
+      <button onclick=closeView() class="recipe-view__close">
+        <svg aria-hidden="true" data-prefix="fas" data-icon="long-arrow-alt-left" class="svg-inline--fa fa-long-arrow-alt-left fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#dc2430" d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"/></svg>
+      </button>
+      <div class="recipe-view__content">
+        <h1>Recipes</h1>
+        <ul class="recipes-list">
+          
+        </ul>
+      </div>
+      <form class="recipe-form">
+        <div class="form-group">
+        <input class="title" type="text" placeholder="Title" name="title" value=""/>
+        <input class="description" type="text" placeholder="Description" name="description" value=""/>
+        <input class="servings" type="number" placeholder="Servings" name="servings" value=""/>
+        <input class="preptime" type="text" placeholder="Preparation Time" name="prepTime" value=""/>
+        <input class="cooktime" type="text" placeholder="Cooking Time" name="cookTime" value=""/>
+        </div>
+
+        <div class="form-group">
+          <h6>Ingredients</h6>
+          <input class="name" type="text" placeholder="Name" name="name" value=""/>
+          <input class="amount"  type="number" placeholder="Amount" name="amount" value=""/>
+          <input class="measurement" type="text" placeholder="Measurement" name="measurement" value=""/>
+        </div>
+        <div class="form-group">
+          <h6>Directions</h6>
+          <input class="instructions" type="text" placeholder="Instructions" name="instructions" value=""/>
+        </div>
+        <div class="form-group btn">
+          <input type="reset" class="form-btn btn-cancel" value="Cancel" onclick=cancelForm()>
+          <input class="form-btn btn-submit" type="submit" value="Submit">
+        </div>
+
+      </form>
+      <button onclick=showForm() class="btn-add">+</button>
+    </div>
+    
+    <div class="app"></div>
+
+    <button onclick=viewRecipes() class="btn-update">Add/Update<span>Recipes</span></button>
+    <script src="/js/displayApi.js"></script>
+    <script src="/js/viewApi.js"></script>
+    <script src="/js/addApi.js"></script>
+    <script src="/js/updateApi.js"></script>
+  </body>
+</html>

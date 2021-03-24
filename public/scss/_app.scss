@@ -1,0 +1,102 @@
+.app {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 60px;
+
+    &.blur {
+        filter: blur(8px);
+    }
+
+    .recipe {
+        padding: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px dashed #dc2430;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        position: relative;
+
+        &__image {
+            height: 200px;
+            width: 200px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 100%;
+            border: 1px solid #c1c1c1;
+        }
+
+        &__description {
+            padding: 0 30px;
+        }
+
+        &__text {
+            margin-top: 15px;
+        }
+
+        .btn-more {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-family: "Raleway", sans-serif;
+            background-color: #dc2430;
+            border: 0;
+            padding: 20px 30px;
+            text-transform: uppercase;
+            color: #fd838a;
+            font-weight: 800;
+            letter-spacing: 4px;
+            font-size: 13px;
+            border-radius: 6px;
+            transition: color 0.3s ease-in;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.btn-update {
+    background-color: #dc2430;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    padding: 10px;
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 16px;
+    box-shadow: 0 0 5px #a33a40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 24px;
+    font-family: 'Raleway', 'san-serif';
+
+    span {
+        display: block;
+    }
+}
+
+.btn-add {
+    width: 60px;
+    height: 60px;
+    background-color: #dc2430;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-size: 60px;
+    color: #fff;
+    border: 0;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

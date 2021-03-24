@@ -1,0 +1,136 @@
+.btn-edit {
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+    svg {
+        width: 30px;
+    }
+}
+
+.recipe-view {
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: none;
+    overflow: auto;
+
+    &.show {
+        display: block;
+    }
+
+    &__close {
+        width: 60px;
+        position: absolute;
+        left: 20px;
+        background-color: transparent;
+        border: 0;
+    }
+
+    &__content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-top: 60px;
+        flex-direction: column;
+    }
+
+    .recipes-list {
+        display: grid;
+        grid-gap: 20px;
+        padding-bottom: 60px;
+
+        &__item {
+            font-size: 18px;
+            font-weight: 900;
+            display: grid;
+            grid-template-columns: 1fr 30px;
+            align-items: center;
+            grid-gap: 20px;
+        }
+    }
+}
+
+.recipe-form {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    justify-items: center;
+    grid-gap: 30px;
+    z-index: 1;
+    overflow: auto;
+    display: none;
+
+    &.show {
+        display: grid;
+    }
+
+    input,
+    textarea,
+    button {
+        border: 0;
+        background: transparent;
+        font-family: "raleway", "san-serif";
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input,
+    textarea {
+        padding: 10px 0;
+        border-bottom: 1px solid rgb(194, 194, 194);
+    }
+
+    .form-group {
+        width: 400px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+
+        &.btn {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            padding-bottom: 30px;
+        }
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    .form-btn {
+        background-color: #dc2430;
+        padding: 20px 30px;
+        text-transform: uppercase;
+        color: #fd838a;
+        font-weight: 800;
+        letter-spacing: 4px;
+        font-size: 13px;
+        border-radius: 6px;
+        transition: color 0.3s ease-in, background-color 0.3s ease-in;
+
+        &:hover {
+            color: #fff;
+        }
+        &.btn-cancel {
+            background: transparent;
+            border: 3px solid #dc2430;
+            color: #dc2430;
+
+            &:hover {
+                background-color: #dc2430;
+                color: #fff;
+            }
+        }
+    }
+}
